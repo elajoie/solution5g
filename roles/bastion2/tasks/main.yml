@@ -79,13 +79,3 @@
     --noautoconsole"
   with_items:
     - "{{  nodes.bastion2  }}"
-# This is dirty but allows the restart of VMs after initialization - change time to fit your network speed
-- name: Wait for 160 sec
-  wait_for:
-    delay: 160
-    timeout: 0
-
-- name: Restart VM
-  command: "virsh start {{ item.name }}"
-  with_items:
-    - "{{  nodes.bastion2  }}"
