@@ -73,7 +73,7 @@
     --vcpus {{ item.vm_vcpu }}
     --os-type linux
     --os-variant rhel{{ _rhel_os_variant }}
-    --network network=ovs-network,mac={{ item.macaddr }},portgroup='vlan-300'
+    --network network=ovs-network,mac={{ item.macaddr }},portgroup='vlan-400'
     --boot uefi
     --disk /var/lib/libvirt/images/bastion2_240G.qcow2
     --noautoconsole"
