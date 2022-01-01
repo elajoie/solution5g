@@ -9,3 +9,7 @@
     - role: bastion2
       tags: [ never, bastion2 ]
       when: inventory_hostname == "192.168.16.5"
+
+    - role: bastion2-post
+      tags: [ never, bastion2 ]
+      when: inventory_hostname == "172.16.0.8"

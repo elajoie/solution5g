@@ -1,0 +1,13 @@
+---
+# tasks file for bastion
+
+- name: Install crucible tool set
+  dnf:
+    name:
+      - python3-netaddr
+    state: latest
+
+- name: Enable all repositories starting with rhel-6-server
+  community.general.rhsm_repository:
+    name: rhocp-4.9-for-rhel-8-x86_64-rpms,ansible-2.9-for-rhel-8-x86_64-rpms
+    state: enabled
