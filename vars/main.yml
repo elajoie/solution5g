@@ -1,0 +1,8 @@
+---
+nodes:
+  bastion2:
+    - name: "bastion2"
+      macaddr: "52:54:00:88:bf:08"
+      vm_vcpu: 4
+      vm_memory_size: 16384
+...
